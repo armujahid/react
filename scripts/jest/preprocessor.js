@@ -21,7 +21,7 @@ const pathToBabelPluginWrapWarning = require.resolve(
   '../babel/wrap-warning-with-env-check'
 );
 const pathToBabelPluginAsyncToGenerator = require.resolve(
-  'babel-plugin-transform-async-to-generator'
+  '@babel/plugin-transform-async-to-generator'
 );
 const pathToBabelrc = path.join(__dirname, '..', '..', '.babelrc');
 const pathToErrorCodes = require.resolve('../error-codes/codes.json');
@@ -29,7 +29,7 @@ const pathToErrorCodes = require.resolve('../error-codes/codes.json');
 const babelOptions = {
   plugins: [
     // For Node environment only. For builds, Rollup takes care of ESM.
-    require.resolve('babel-plugin-transform-es2015-modules-commonjs'),
+    require.resolve('@babel/plugin-transform-modules-commonjs'),
 
     pathToBabelPluginDevWithCode,
     pathToBabelPluginWrapWarning,
@@ -38,7 +38,7 @@ const babelOptions = {
     // Don't put this in .babelrc so that we don't embed filenames
     // into ReactART builds that include JSX.
     // TODO: I have not verified that this actually works.
-    require.resolve('babel-plugin-transform-react-jsx-source'),
+    require.resolve('@babel/plugin-transform-react-jsx-source'),
 
     require.resolve('../babel/transform-prevent-infinite-loops'),
   ],
