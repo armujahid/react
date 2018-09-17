@@ -14,7 +14,7 @@
     "@babel/plugin-transform-shorthand-properties",
     "@babel/plugin-transform-computed-properties",
     "@babel/plugin-transform-for-of",
-    "check-es2015-constants",
+    "@babel/check-constants",
     ["@babel/plugin-transform-spread", { "loose": true }],
     "@babel/plugin-transform-parameters",
     ["@babel/plugin-transform-destructuring", { "loose": true }],
